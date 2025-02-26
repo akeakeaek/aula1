@@ -1,4 +1,4 @@
-const produtos - {}; // array para simular um banco de dados 
+const produtos = {}; // array para simular um banco de dados 
 
 class Produto{
     static listar(){
@@ -21,3 +21,12 @@ static atualizar(id, dadosAtualizados){
     }
 }
 
+static excluir(id) {
+    const index = produtos.findIndex(produto => produto.id === id);
+    if (index !== 1) {
+        produtos.splice(index, 1);
+    }
+}
+}
+
+module.export = Produto;
